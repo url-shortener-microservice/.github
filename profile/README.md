@@ -36,3 +36,9 @@ All deployed as Azure Container Apps
 Images stored in Azure Container Registry (ACR)  
 Logs collected via Log Analytics Workspace  
 CI/CD via GitHub Actions  
+
+##  Prerequisites
+- Azure subscription (I used a student subscription with free 100$ credits)
+- Azure CLI installed or using the Azure browser cloud shell
+- Docker doesn't need to be installed!
+- Git repos for the different apps
