@@ -31,6 +31,7 @@ This guide is written by Stefan Lederhaas.
 ┌──────────────────────────┐
 │   FastAPI QR Generator   │
 └──────────────────────────┘
+```
 
 All deployed as Azure Container Apps  
 Images stored in Azure Container Registry (ACR)  
