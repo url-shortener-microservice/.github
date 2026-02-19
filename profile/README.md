@@ -1,13 +1,15 @@
 # 📘 URL Shortener Platform — Full Azure Deployment Guide
 
-A cloud‑native, containerized URL shortener platform built with:
+A cloud‑native, containerized URL shortener-mapping platform built with:
 
 - **Frontend**: Static HTML/JS SPA using MSAL for authentication  
 - **Backend API**: Java Spring Boot  
 - **QR Generator Microservice**: Python FastAPI  
 - **Infrastructure**: Azure Container Apps, Azure Container Registry, Log Analytics, CI/CD, App Registrations  
 
-This guide walks you through setting up the entire system from scratch in Azure.
+This guide is produces to deepen my understanding and practical experience/knowledge in the Azure environment in preparation to the AZ-204 exam.
+The goal is not to create a flashed out real live application, but to create an ecosystem that incorporates multiple essential Azure Cloud Compute Solutions focusing on DevOps/Deployment aspects.
+This guide is written by Stefan Lederhaas.
 
 ---
 
@@ -33,4 +35,4 @@ This guide walks you through setting up the entire system from scratch in Azure.
 All deployed as Azure Container Apps  
 Images stored in Azure Container Registry (ACR)  
 Logs collected via Log Analytics Workspace  
-CI/CD via GitHub Actions using a Service Principal  
+CI/CD via GitHub Actions  
