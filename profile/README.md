@@ -39,7 +39,18 @@ Logs collected via Log Analytics Workspace
 CI/CD via GitHub Actions  
 
 ##  Prerequisites
-- Azure subscription (I used a student subscription with free 100$ credits)
+- Azure subscription (I used a student subscription with free 100$ credits,                           though the costs stayed well bellow 5$)
 - Azure CLI installed or using the Azure browser cloud shell
 - Docker doesn't need to be installed!
 - Git repos for the different apps
+
+# Deploying the Azure Resources
+
+#TODO Azure loggin
+
+After logging in we can create the resource group in which we will deploy our different resources.
+
+```
+az group create --name rg-url-shortener --location germanywestcentral
+```
+
