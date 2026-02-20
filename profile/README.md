@@ -62,3 +62,32 @@ In my case I chose "germanywestcentral" from the parameter list.
 az group create --name rg-url-shortener --location germanywestcentral
 ```
 
+Now we can create our container registry, which will hold the docker images.
+
+```
+az acr create --resource-group rg-url-shortener --name acr-url-shortener --sku Basic
+```
+For the Azure Container Registry there are 3 pricing tiers (Basic, Standard, Premium)
+
+Basic - 10 GB storage, Standard - 100 GB storage, Premium - 500GB + (geo-replication, private network, ...)
+
+99% of the costs in this architecture come from the ACR. If its necessary to minimize the costs, then only having dev and latest images in registry would probably significantly reduce overall costs!
+
+As a next step we need to fetch the ACR login server, username and password. We need this for CI/CD and the container apps.
+
+These values can retrieved with the following commands:
+```
+az acr show --name acr-url-shortener --query loginServer -o tsv
+az acr credential show --name acr-url-shortener --query username -o tsv
+az acr credential show --name acr-url-shortener --query passwords[0].value -o tsv
+
+```
+You may also save these values in variables like so for later reference:
+
+```
+ACR_LOGIN_SERVER=$(az acr show --name myacr --query loginServer -o tsv)
+```
+
+Next we create the Container Environment which will hold our different container apps. <br> For this we first need to create a Log Analytics Workspace where logs and diagnostics will be collected.
+
+
