@@ -46,9 +46,17 @@ CI/CD via GitHub Actions
 
 # Deploying the Azure Resources
 
-#TODO Azure loggin
+#TODO Azure login
 
-After logging in we can create the resource group in which we will deploy our different resources.
+After login we can create the resource group in which we will deploy our different resources.
+
+**Important note for using Trial/Student Subscriptions**:<br>
+You may need to view the subscription policies to see in which regions you are allowed to deploy resources to.<br>
+For this, in the Azure Portal, navigate to your subscription -> Policy/Compliance. <br> When you see a policy with "Allowed resource deployment regions" - open it and navigate to "view assignment". Here you can see the Parameter values for allowed regions.
+
+In my case I chose "germanywestcentral" from the parameter list.
+
+==Fell free to choose resource naming and location based on your needs!==
 
 ```
 az group create --name rg-url-shortener --location germanywestcentral
